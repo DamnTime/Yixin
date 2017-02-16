@@ -1,0 +1,53 @@
+<ion-content class="has-footer content course_type_box">
+
+    <ion-side-menus  enable-menu-with-back-views="true">
+        <ion-side-menu-content drag-content="true">
+            <ion-header-bar class="bar-stable">
+                <a menu-toggle="left" class="button icon ion-navicon"></a>
+                <h1 class="title">课程分类</h1>
+            </ion-header-bar>
+            <ion-content>
+                <div class="list course_list">
+                    <ul>
+                        <li class="item" ng-repeat="course in courseData.data">
+                            <a href="#/detail/{{course.cid}}" class="course_img">
+                                <img ng-src="{{course.pic}}" alt=""/>
+                            </a>
+                            <div class="information">
+                                <h2><a href="#/detail/{{course.cid}}">{{course.title}}</a></h2>
+                                <p>讲师：{{course.tname}}</p>
+                                <p>课时：{{course.clenth}}</p>
+                                <p>开课时间：{{course.startTime}}</p>
+                                <p>上课地点：{{course.address}}</p>
+                                <p> <a href="#/address">查看各校区地址</a></p>
+                            </div>
+                            <p class="course_deal">
+                                <span>¥ {{course.price}}</span>
+                                <a href="#/detail/{{course.cid}}" class="course_btn">查看详情</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <ion-infinite-scroll ng-if="hasMore" distance="10%" on-infinite="loadMore()">
+                </ion-infinite-scroll>
+                <p ng-hide='hasMore' class="text-center assertive">喵，到最后了</p>
+                <br/><br/>
+            </ion-content>
+        </ion-side-menu-content>
+        <ion-side-menu side="left" width="180">
+            <div class="list course_type_list">
+                <a class="item item-button-right" ng-repeat="type in courseTypeList"
+                        href="#/list/{{type.tpid}}">
+                    {{type.tpname}}getCourseData(1,type.tpid)
+                    <button class="button button-icon icon ion-arrow-right-b">
+                    </button>
+                </a>
+            </div>
+        </ion-side-menu>
+    </ion-side-menus>
+
+
+
+
+</ion-content>
+<div ng-include="'tpl/include/footer_all.html'"></div>

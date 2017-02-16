@@ -1,0 +1,67 @@
+<div ng-include="'tpl/include/header_all.html'"></div>
+<ion-content class="register">
+<!--主体内容-->
+        <h2>新用户注册</h2>
+    <div class="list">
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">邮箱：</span>
+            <em></em>
+            <i></i>
+            <input type="text" placeholder="请输入正确的邮箱地址">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">手机号：</span>
+            <input type="text" placeholder="请输入手机号" ng-model="phone" required ng-pattern="mobileRegx">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">密码：</span>
+            <input type="text" placeholder="请输入6至18为字母或数字">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">确认密码：</span>
+            <input type="text" placeholder="请再次输入密码 ">
+        </label>
+    </div>
+    <div class="isAgree">
+        <input type="checkbox" checked id="isChecked"/>
+        <span>我已阅读并同意用户注册协议</span>
+    </div>
+    <div class="li_btn">
+        <button type="button" id="register">提交注册</button>
+    </div>
+        <!--<ul>-->
+            <!--<li>-->
+                <!--<span>邮箱：</span>-->
+                <!--<input type="text" id="uname" placeholder="请输入邮箱名"/>-->
+                <!--<em></em>-->
+                <!--<i></i>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<span>手机号：</span>-->
+                <!--<input type="text" id="phone" placeholder="请输入手机号"/>-->
+                <!--<em></em>-->
+                <!--<i></i>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<span>密码：</span>-->
+                <!--<input type="password" id="upwd" placeholder="请输入密码"/>-->
+                <!--<em></em>-->
+                <!--<i></i>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<span>重复密码：</span>-->
+                <!--<input type="password" id="upwd2" placeholder="请重复输入密码"/>-->
+                <!--<em></em>-->
+                <!--<i></i>-->
+            <!--</li>-->
+            <!--<li class="li_checkbox"><label>-->
+                <!--<input type="checkbox" checked/>-->
+                <!--<span>我已阅读并同意用户注册协议</span>-->
+            <!--</label>-->
+            <!--</li>-->
+            <!--<li class="li_btn">-->
+                <!--<button type="button" id="register">提交注册</button>-->
+            <!--</li>-->
+        <!--</ul>-->
+</ion-content>
+<div ng-include="'tpl/include/footer_all.html'"></div>

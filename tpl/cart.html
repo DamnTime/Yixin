@@ -1,0 +1,36 @@
+
+<div ng-include="'tpl/include/header_all.html'"></div>
+<ion-content class="has-header has-footer content">
+  <div class="container">
+    <h2 class="text-center">我的订单</h2>
+    <hr/>
+    <div class="row">
+      <div class="col col-20">
+        <span><input type="checkbox" class="cart_checkbox"/></span>
+      </div>
+      <div class="col col-40">
+        <a href="" class="cart_img"><img ng-src="img-course/01.png" alt=""/></a>
+        <p class="cart_title">HTML5基础入门</p>
+        <strong>¥1599.00</strong>
+      </div>
+      <div class="col col-40">
+        <button class="edit_style" ng-click="showHide()" ng-show="isShow">编辑</button>
+        <span ng-show="isShow" class="count">x{{count}}</span>
+        <div class="handle" ng-hide="isShow">
+        <div class="handle_count">
+          <span ng-click="jian()">-</span>
+          <span>{{count}}</span>
+          <span ng-click="add()">+</span>
+        </div>
+        <div class="handle_result">
+          <button>删除</button>
+          <button  ng-click="close()" ng-hide="isShow">完成</button>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+  </div>
+</ion-content>
+<div ng-include="'tpl/include/footer_all.html'"></div>

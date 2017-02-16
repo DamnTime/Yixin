@@ -1,0 +1,27 @@
+<div ng-include="'tpl/include/header_all.html'"></div>
+<ion-content class="has-footer has-header">
+    <section class="course_box">
+        <img ng-src="{{course.pic}}" alt=""/>
+        <aside class="course_info">
+            <h2>{{course.title}}</h2>
+            <ul>
+                <li>讲师：{{course.tname}}</li>
+                <li>课时：{{course.clength}}</li>
+                <li>开课时间：{{course.startTime}}</li>
+                <li>上课地点：{{course.address}} <a href="#/address">查看各校区地址</a></li>
+            </ul>
+            <p class="course_link">
+                课程价格：<strong id="price">¥ {{course.price}}</strong>
+                <span ng-click="addCart()" id="addCart"><em class="icon-cart"></em>加入购物车</span>
+                <a href="">加入收藏</a>
+            </p>
+        </aside>
+        <div class="course_detail">
+            <h2 class="title"><span>课程详情</span></h2>
+            <div class="details" ng-bind-html="course.details">
+            </div>
+        </div>
+    </section>
+
+</ion-content>
+<div ng-include="'tpl/include/footer_all.html'"></div>
